@@ -2,38 +2,65 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 
-// var span = document.getElementById("span");
-// window.load = displayClock();
+// var span = $("#span");
 
 // function displayClock(){
-//   var display = new Date().toDateString()
-//   span.innerHTML= display 
-//   setTimeout(displayClock, 1000);
-// }
-var now = dayjs();
-
-$('#span').text(now.format("dddd , MMMM , D , h:mm:ss"));
-// const dataEl= document.querySelector("date");
-// dateEl.innerHTML += `<span id="${formattedDate}</span>`;
-
-
-//  dateEl.append(formattedDate);
-
-//  const todayDate = dayjs().calendar("dddd , MMMM , D , h:mm:ss");
-// // var span = dayjs().format("dddd , MMMM , D , h:mm:ss");
-// $(span).text(todayDate);
-
-
-// const saveBtn = document.querySelector("saveBtn");
-// const textarea = document.querySelector("hour-11");
-//  textarea.innerHTML = localStorage.getItem('value')
-
-
-  // input.addEventListener("keyup", display);
-  // function display(){
-  //   localStorage.setItem('value', input.value);
-  //   textarea.innerHTML = localStorage.getItem('value')
+  //   var display = new Date().toDateString()
+  //   span.innerHTML= display 
+  //   setTimeout(displayClock, 1000);
   // }
+  
+  
+  setInterval(() => {
+    var currentTime = dayjs().format('MMM DD, hh:mm:ss a')
+    $('#span').text(currentTime)
+    // window.load = currentTime();
+    
+  }, 1000);
+  
+
+
+$(".saveBtn").on('click', function(){
+var value = $(this).siblings(".description").val()
+console.log(value);
+var time = $(this).parent().attr('id')
+console.log(time.split('-')[1])
+localStorage.setItem(time, value)
+}); 
+
+function hourlyUp(){
+  var currentHour = dayjs().hour()
+  $('.time-block').each(function(){
+    var blockHour = parseInt($(this).attr('id').split("-")[1]);
+    console.log(currentHour);
+    console.log(blockHour);
+    if (currentHour > blockHour ) {
+    $(this).addClass('past');
+  } else if(currentHour === blockHour){
+      $(this).removeClass('past');
+      $(this).addClass('present');
+  }else {
+  $(this).removeClass('past');
+   $(this).removeClass('present');
+   $(this).addClass('future');
+  }
+  });
+
+}
+hourlyUp();
+
+for(let i = 9; i <=21; i++){
+  $(`#hour-${i} .description`).val(localStorage.getItem(`hour-${i}`));
+}
+
+
+  // function display(){
+  //   localStorage.setItem(time, input.value);
+  // }
+
+//   input.addEventListener("keyup", display);
+//     textarea.innerHTML = localStorage.getItem('value')
+//   }
 
 
   // TODO: Add a listener for click events on the save button. This code should
