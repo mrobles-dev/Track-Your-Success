@@ -17,8 +17,7 @@ This calendar app follows a complete day for people to organize their work and o
 This responsive calendar will display your local time above. As time goes by, the present hour will always be purple, the past will be red, and the future will be green. Once the day is complete, all boxes will be read. To save a task, simply click the blue save button. Below is a clear fields button to erase the day for tomorrow. 
 
 
-
-
+![alt text](./Assets/screencapture-file-C-Users-milto-bootcamp-Homework-Track-Your-Success-index-html-2023-04-16-00_13_08.png)
 
 ## License
 MIT License
