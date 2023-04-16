@@ -1,7 +1,19 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Cinzel Decorative', cursive;
+  font-family: 'Lato', sans-serif;
   font-size: 16px;
-    background-color: #ddcccc;
+  background-color: #ddcccc;
+}
+
+
+#flex::after {
+  content: "💪";
+  transform: scaleX(-1);
+ ;
+}
+
+#flex::before {
+  content: "💪";
 }
 
 textarea {
@@ -32,12 +44,12 @@ textarea {
 }
 
 .past {
-  background-color: #d3d3d3;
+  background-color: #e94a4a;
   color: white;
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #827be7;
   color: white;
 }
 
@@ -47,11 +59,11 @@ textarea {
 }
 
 .saveBtn {
-  border-left: 1px solid rgb(128, 54, 54);
+  border-left: 1px solid rgb(128, 54, 54); 
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
-  color: white;
+  
 }
 
 .saveBtn i:hover {
@@ -59,7 +71,26 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
-.date{
+.date {
+  font-family: 'Cinzel Decorative', cursive;
+  font-family: 'Lato', sans-serif;
+  font-size: 26px;
   text-decoration: solid;
   font-weight: 500;
+}
+ 
+footer{
+  display: flex;
+justify-content: center;
+}
+
+#clear{
+  display: block;
+  width: 55%;
+  border: #000000;
+  padding: 15px 25px;
+  font-size: small;
+  font-weight: bolder;
+  cursor:pointer;
+  text-align: center;
 }
