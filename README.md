@@ -22,6 +22,12 @@ https://mrobles-dev.github.io/Track-Your-Success/
 
 ![alt text](./Assets/screencapture-mrobles-dev-github-io-Track-Your-Success-2023-04-16-16_23_54.png)
 
+
+
+## Acknowledgements
+
+Big thank you to my tutor John Broaddus for all his help over the weeks. He helped me figure out how to get the color change working. I'd also like to acknowledge OpenAI's chatGPT to answering how I could short several lines of code I knew could be a for loop but needed help with getting there, as mentioned in js.
+
 ## License
 MIT License
 

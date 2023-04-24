@@ -34,6 +34,8 @@ function hourlyUp(){
 }
 hourlyUp();
 
+
+// knew a for loop would work but didn't know how exactly - asked OpenAI for explanation on this loop
 for(let i = 9; i <=21; i++){
   $(`#hour-${i} .description`).val(localStorage.getItem(`hour-${i}`));
 }
